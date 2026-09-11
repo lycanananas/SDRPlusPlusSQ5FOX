@@ -2,6 +2,12 @@ build/
 .vscode/
 .vs/
 .idea/
+pkg/
+src/
+*.pkg.tar.*
+*.src.tar.*
+*.sig
+.SRCINFO
 *.old
 *.dll
 *.exe
