@@ -1,5 +1,5 @@
 pkgname=sdrpp-sq5fox
-pkgver=1.0.4.r845.4658a1ad
+pkgver=1.0.4.r887.051c753b
 pkgrel=1
 pkgdesc="SQ5FOX build of the bloat-free SDR receiver"
 arch=(x86_64)
