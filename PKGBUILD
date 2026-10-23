@@ -1,13 +1,13 @@
 pkgname=sdrpp-sq5fox
 _basever=1.0.4
-pkgver=1.0.4.r1804.242bc442
+pkgver=${_basever}.r887.051c753b
 pkgrel=1
 pkgdesc="SQ5FOX build of the bloat-free SDR receiver"
 arch=(x86_64)
 url="https://www.sdrpp.org/"
 license=(GPL-3.0-only)
 depends=(fftw glew glfw libvolk)
-_plugindeps=(rtl-sdr portaudio rtaudio)
+_plugindeps=(rtl-sdr portaudio)
 makedepends=(cmake git "${_plugindeps[@]}")
 optdepends=("${_plugindeps[@]}")
 provides=(sdrpp sdrpp-git)
@@ -31,6 +31,7 @@ build() {
         -DOPT_BUILD_SDRPLAY_SOURCE=OFF \
         -DOPT_BUILD_SOAPY_SOURCE=OFF \
         -DOPT_BUILD_NEW_PORTAUDIO_SINK=ON \
+	-DOPT_BUILD_AUDIO_SINK=OFF \
         -DCMAKE_POLICY_VERSION_MINIMUM=3.5
     cmake --build "$srcdir/build"
 }
